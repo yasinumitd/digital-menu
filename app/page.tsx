@@ -1,12 +1,14 @@
 import React from "react"
 import Data from '@/mocks/raise.json'
 import Link from "next/link";
+import groupProduct from "@/gropProduct/groupProduct";
 
 export default function Home() {
-  const departments = Data[0];
+  const { getDataByDepByGroupByProduct } = groupProduct();
+  
   return (
     <div>
-      {departments.map((department, index) => (
+      {getDataByDepByGroupByProduct.map((department, index) => (
         <div key={department.ID} >
           {index > 0 && <hr className="my-4 border-t" />} 
 

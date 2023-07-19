@@ -1,7 +1,3 @@
-
-
-
-import Departments from '@/app/[departmentName]/page';
 import Data from '@/mocks/raise.json'
 interface GroupByProduct {
     ID: number;
